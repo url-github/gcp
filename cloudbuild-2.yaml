@@ -1,0 +1,10 @@
+steps:
+- name: gcr.io/cloud-builders/gcloud
+  args: ['functions',
+         'deploy',
+         'gcs_to_bq2', 
+         '--source=.',
+         '--runtime=python311',
+         '--region=europe-central2',
+         '--trigger-resource=5858438348348348',
+         '--trigger-event=google.storage.object.finalize'] 
